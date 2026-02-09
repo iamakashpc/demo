@@ -1,3 +1,93 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+:root {
+    /* Dark Theme Variables */
+    --bg-dark: #0B0F17;
+    --bg-card: #1F2937;
+    --bg-card-hover: #374151;
+
+    /* Brand Colors */
+    --brand-blue: #0E76BD;
+    --brand-red: #ED1B24;
+    --brand-red-hover: #EA2127;
+    --brand-gray: #111827;
+    /* Darker gray for dark mode */
+
+    /* Semantic */
+    --primary: var(--brand-red);
+    --primary-hover: var(--brand-red-hover);
+    --secondary: var(--brand-blue);
+
+    /* UI Colors */
+    --bg-main: #0B0F17;
+    /* Deep Navy/Black */
+    --bg-secondary: #111827;
+    /* Dark Gray/Blue */
+
+    --text-main: #F3F4F6;
+    /* Off-white */
+    --text-secondary: #9CA3AF;
+    /* Gray 400 */
+    --text-muted: #6B7280;
+    /* Gray 500 */
+
+    --border: #1F2937;
+    --border-light: #374151;
+
+    /* Typography */
+    --font-main: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.5;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.1;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
 
 @import "tailwindcss";

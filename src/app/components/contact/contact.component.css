@@ -1,0 +1,240 @@
+/* Contact Section */
+.contact-section {
+    padding: 6rem 0;
+    background: var(--bg-main);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+/* Split Layout */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* --- Left Column: Action Grid --- */
+.contact-options-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-options-column h3 {
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.contact-subtext {
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.action-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.action-card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.action-card:hover {
+    transform: translateX(10px);
+    border-color: var(--brand-blue);
+    background: rgba(14, 118, 189, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-card:hover {
+    border-color: #25D366;
+    /* WhatsApp Green */
+    background: rgba(37, 211, 102, 0.05);
+}
+
+/* Icons box styling */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+
+.action-card:hover .icon-box {
+    transform: scale(1.1);
+}
+
+.call-icon {
+    background: rgba(14, 118, 189, 0.1);
+    color: var(--brand-blue);
+}
+
+.email-icon {
+    background: rgba(237, 27, 36, 0.1);
+    color: var(--brand-red);
+}
+
+.whatsapp-icon {
+    background: rgba(37, 211, 102, 0.1);
+    color: #25D366;
+}
+
+.action-card .material-icons {
+    font-size: 28px;
+}
+
+.action-text h4 {
+    color: var(--text-main);
+    font-size: 1.15rem;
+    margin: 0 0 0.25rem 0;
+    font-weight: 700;
+}
+
+.action-text p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.action-card:hover .action-text p {
+    color: var(--text-main);
+}
+
+/* --- Right Column: Maps --- */
+.locations-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.location-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.location-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--brand-blue);
+}
+
+.loc-text {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--brand-blue);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    text-transform: uppercase;
+}
+
+.badge-branch {
+    background: var(--text-muted);
+    /* Gray for branch */
+}
+
+.loc-text h4 {
+    color: var(--text-main);
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.loc-text p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.direction-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--brand-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: gap 0.2s;
+}
+
+.direction-link:hover {
+    gap: 0.75rem;
+    text-decoration: underline;
+}
+
+.map-frame iframe {
+    display: block;
+    /* Remove bottom space */
+    filter: invert(90%) hue-rotate(180deg);
+    /* Dark Mode Map Hack */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 4rem 0;
+    }
+
+    .action-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .icon-box {
+        width: 50px;
+        height: 50px;
+    }
+}

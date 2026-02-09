@@ -1,0 +1,21 @@
+<header class="navbar">
+    <div class="container nav-container">
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="AJ Enterprise Logo" class="logo-img">
+            <span class="logo-text">AJ ENTERPRISES</span>
+        </div>
+
+        <button class="mobile-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="nav-links" [class.nav-active]="isMenuOpen">
+            <a (click)="scrollTo('home')">Home</a>
+            <a (click)="scrollTo('about')">About</a>
+            <a (click)="scrollTo('services')">Services</a>
+            <a (click)="scrollTo('contact')" class="btn-contact">Contact Us</a>
+        </nav>
+    </div>
+</header>

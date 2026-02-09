@@ -1,0 +1,8 @@
+/* Main App Layout */
+/* Most styles have been moved to styles.css (global) or individual components */
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

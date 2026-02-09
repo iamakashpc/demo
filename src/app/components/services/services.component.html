@@ -1,0 +1,27 @@
+<section id="services" class="services">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive security architecture for every need.</p>
+        </div>
+
+        <div class="cards-grid">
+            @for (service of services; track service.title) {
+            <div class="card">
+                <div class="image-wrapper">
+                    <img [src]="service.image" [alt]="service.title">
+                    <div class="overlay"></div>
+                </div>
+                <div class="content-wrapper">
+                    <div class="icon-wrapper">
+                        <span class="material-icons">{{service.icon}}</span>
+                    </div>
+                    <h3>{{service.title}}</h3>
+                    <p>{{service.description}}</p>
+                    <a class="learn-more">Learn more <span class="material-icons arrow">arrow_forward</span></a>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
